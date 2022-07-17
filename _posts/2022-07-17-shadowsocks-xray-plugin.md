@@ -1,16 +1,16 @@
 ## Shadowsocks over WebSocket with TLS Using Xray Plugin on CentOS, Rocky Linux, or AlmaLinux
 
-### 1. Generate Cloudflare API Token
-
 I assume as a starting point that:
 
 * You already own a domain name
 * You have opened an account with [Cloudflare](https://www.cloudflare.com)
-* You have added that domain name to your Cloudflare account
+* You have added your domain name to your Cloudflare account
 * You have rented a server, which is typically a virtual private server (VPS)
 * The server runs CentOS, Rocky Linux, or AlmaLinux
 * Ports 80 and 443 are open for input on the server
-* A DNS record points from the server hostname to the server IP address with Cloudflare providing DNS services only, not proxying
+* A DNS record points from the server hostname to the server IP address, with Cloudflare providing DNS services only, not proxying
+
+### 1. Generate Cloudflare API Token
 
 First we're going to obtain a Cloudflare API token so that the Automatic Certificate Management Environment (ACME) client has permission to manage your DNS records at Cloudflare.
 
@@ -33,25 +33,25 @@ By default, the xray plugin will look for TLS certificates signed by acme.sh. Th
 
 Use the `export` command to set a shell variable containing the value of the Cloudflare API token. Using our example value from above:
 
-```
+```bash
 export CF_Token="GI1wnt69IjOkVCqSvIv6NqSTetdp7s6OER4WttVp"
 ```
 
 Check that the shell variable is now set to the expected value:
 
-```
+```bash
 echo $CF_Token
 ```
 
 Install the prerequisites for the script:
 
-```
+```bash
 yum install wget curl tar socat
 ```
 
 Download the Acme.sh script:
 
-```
+```bash
 wget -O- https://get.acme.sh | sh
 ```
 
@@ -59,13 +59,13 @@ This creates a directory, `.acme.sh`, containin the script and associated files.
 
 Register your email address with ZeroSSL:
 
-```
+```bash
 ~/.acme.sh/acme.sh --register-account -m example@gmail.com
 ```
 
 Get an SSL certificate from ZeroSSL:
 
-```
+```bash
 ~/.acme.sh/acme.sh --issue --dns dns_cf -d host.example.com
 ```
 
@@ -80,11 +80,11 @@ The script places your certificate and keys as follows:
 
 The SSL certificates come with ZeroSSL listed as the official certificate authority. You can review the certificates with the `openssl` command. For example:
 
-```
+```bash
 openssl x509 -in /root/.acme.sh/host.example.com/host.example.com.cer -noout -text
 ```
 
-### 3. Install RPMs
+### 3. Install Packages
 
 Add the Extra Packages for Enterprise Linux (EPEL) repository:
 
