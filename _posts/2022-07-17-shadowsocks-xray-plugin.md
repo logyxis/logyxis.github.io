@@ -1,6 +1,6 @@
 ## Shadowsocks over WebSocket with TLS Using Xray Plugin on CentOS, Rocky Linux, or AlmaLinux
 
-Here is how to make Shadowsocks use WebSocket and TLS using the Xray Plugin and the Teddysun packages CentOS, Rocky Linux, or AlmaLinux. I assume as a starting point that:
+Here is how to make Shadowsocks use WebSocket and TLS with the Xray Plugin and the Teddysun packages on a CentOS, Rocky Linux, or AlmaLinux server. I assume as a starting point that:
 
 * You already own a domain name
 * You have opened an account with [Cloudflare](https://www.cloudflare.com)
