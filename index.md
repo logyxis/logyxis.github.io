@@ -1,5 +1,3 @@
-Here you can say lots of fun things about your site.
+Mathematics (from Ancient Greek μάθημα; 'knowledge, study, learning') is an area of knowledge that includes such topics as numbers (arithmetic, number theory), formulas and related structures (algebra), shapes and the spaces in which they are contained (geometry), and quantities and their changes (calculus and analysis).
 
-Maybe say a some things about yourself.
-
-Or maybe what you plan to blog about.
+Most mathematical activity involves discovering and proving properties of abstract objects by pure reasoning. These objects are either abstractions from nature, such as natural numbers or lines, or -- in modern mathematics -- entities that are stipulated with certain properties, called axioms. A proof consists of a succession of applications of some deductive rules to already known results, including previously proved theorems, axioms and (in case of abstraction from nature) some basic properties that are considered as true starting points of the theory under consideration. The result of a proof is called a theorem. 
