@@ -1,6 +1,6 @@
 ## Shadowsocks over WebSocket with TLS Using Xray Plugin on CentOS, Rocky Linux, or AlmaLinux
 
-I assume as a starting point that:
+Here is how to make Shadowsocks use WebSocket and TLS using the Xray Plugin and the Teddysun packages CentOS, Rocky Linux, or AlmaLinux. I assume as a starting point that:
 
 * You already own a domain name
 * You have opened an account with [Cloudflare](https://www.cloudflare.com)
@@ -88,49 +88,49 @@ openssl x509 -in /root/.acme.sh/host.example.com/host.example.com.cer -noout -te
 
 Add the Extra Packages for Enterprise Linux (EPEL) repository:
 
-```
+```bash
 yum install yum-utils epel-release
 ```
 
 Enable EPEL repository:
 
-```
+```bash
 yum-config-manager --enable epel
 ```
 
 Add the Teddysun repository:
 
-```
+```bash
 yum-config-manager --add-repo https://dl.lamp.sh/shadowsocks/teddysun.repo
 ```
 
 Download and make usable all the metadata for the currently enabled repositories:
 
-```
+```bash
 yum makecache
 ```
 
 List packages from the Teddysun repository:
 
-```
+```bash
 yum repo-pkgs teddysun list
 ```
 
 Install the packages we need for this tutorial:
 
-```
+```bash
 yum install shadowsocks-libev xray-plugin
 ```
 
 Check the version numbers. For shadowsocks-libev, display the help text to see the version number:
 
-```
+```bash
 ss-server -h
 ```
 
 For the xray plugin, you can just display the version number directly:
 
-```
+```bash
 xray-plugin -version
 ```
 
@@ -138,13 +138,13 @@ xray-plugin -version
 
 Edit the supplied configuration file:
 
-```
+```bash
 vi /etc/shadowsocks/shadowsocks-libev-config.json
 ```
 
 Use the following as a model:
 
-```
+```json
 {
         "server":"0.0.0.0",
         "server_port":443,
@@ -162,19 +162,19 @@ Use the following as a model:
 
 Start the service:
 
-```
+```bash
 systemctl start shadowsocks-libev-server
 ```
 
 Enable start after reboot:
 
-```
+```bash
 systemctl enable shadowsocks-libev-server
 ```
 
 Check the status of the service:
 
-```
+```bash
 systemctl status shadowsocks-libev-server
 ```
 
