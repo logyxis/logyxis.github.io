@@ -116,7 +116,7 @@ Issue the verification command, but substitute in the current version. For us, t
 gpgv --keyring .\tor.keyring Downloads\torbrowser-install-win64-11.5_en-US.exe.asc Downloads\torbrowser-install-win64-11.5_en-US.exe
 ```
 
-When the verification is complete, you should see a message, `Good signature from "Tor Browser Developers (signing key) &lt;torbrowser@torproject.org&gt;"`.
+When the verification is complete, you should see a message, `Good signature from "Tor Browser Developers (signing key) <torbrowser@torproject.org>"`.
 
 ### 8. Install Tor Browser
 
