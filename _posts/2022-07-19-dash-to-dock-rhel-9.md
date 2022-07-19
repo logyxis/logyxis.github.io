@@ -4,7 +4,7 @@ If you're running Red Hat Enterprise Linux 9 or a similar distribution, you'll n
 
 If you want to change that behavior, you need to install two packages. The first one is called `gnome-shell-extension-dash-to-dock`. That provides the dash-to-dock functionality. And then to manage the extension, you need a second package, which is called `gnome extensions app`.
 
-```
+```bash
 sudo yum install gnome-shell-extension-dash-to-dock gnome-extensions-app
 ```
 
