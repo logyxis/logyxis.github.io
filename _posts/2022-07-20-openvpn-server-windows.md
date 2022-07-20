@@ -1,5 +1,7 @@
 ## OpenVPN Server on Windows
 
+**THE PROCEDURE IN THIS POST HAS NOT BEEN TESTED**
+
 ### 1. Dynamic DNS Service
 
 You probably don't have a static IP address at home. In this step, you'll subscribe to a Dynamic DNS service. That will give your Window computer a fixed DNS host name, even if its IP address changes from time to time.
