@@ -31,7 +31,7 @@ There you'll see a code signing certificate number. It's currently serial number
 3. Open the **Digital Signatures** tab.
 4. Select the signature, and click **Details**.
 5. Click **View Certificate**.
-6. 6. Select the **Details** tab.
+6. Select the **Details** tab.
 
 The actual serial number and issuer should match the expected values from the website.
 
