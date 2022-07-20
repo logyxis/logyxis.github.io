@@ -27,11 +27,13 @@ On the web page, click where it says **Check integrity**. That opens a new tab f
 There you'll see a code signing certificate number. It's currently serial number `4F7382A39E57A34E167CF912` from the issuer `GlobalSign GCC R45 CodeSigning CA 2020`. It may have changed by the time you read this.
 
 1. Right-click on your downloaded file. 
-2. Click **Properties**. 
-3. Go to the **Signature Verification** tab.
-4. Look at the details of the certificate.
+2. Select **Properties**. 
+3. Open the **Digital Signatures** tab.
+4. Select the signature, and click **Details**.
+5. Click **View Certificate**.
+6. 6. Select the **Details** tab.
 
-The actual serial number and issuer should match the expected values.
+The actual serial number and issuer should match the expected values from the website.
 
 ### 3. Install Gpg4win
 
@@ -48,12 +50,12 @@ Go to the Tor Project website at https://www.torproject.org.
 
 You will see a command to fetching the Tor Developers' signing key. You need to issue that command in a Windows command prompt.
 
-1. In Windows, hold down the **Alt** key on your keyboard, and press **F2**.
+1. In Windows, hold down the **Windows** key on your keyboard, and press **R**.
 2. In the run box, type `cmd`.
 3. Press **Enter**.
 4. A Windows command prompt window opens.
 
-In the Windows command prompt window, issue the command given. You can copy it from the website with **Ctrl**+**c**, and paste it into the Windows command prompt window just by right-clicking on your mouse.
+In the Windows command prompt window, issue the command given. You can copy it from the website with **Ctrl**+**C**, and paste it into the Windows command prompt window just by right-clicking on your mouse.
 
 ```bash
 gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
@@ -105,7 +107,7 @@ gpgv --keyring .\tor.keyring Downloads\torbrowser-install-win64-9.0_en-US.exe.as
 
 Open a Windows command prompt. If you closed the window from before, just reopen it as before.
 
-1. In Windows, hold down the **Alt** key on your keyboard, and press **F2**.
+1. In Windows, hold down the **Windows** key on your keyboard, and press **R**.
 2. In the run box, type `cmd`.
 3. Press **Enter**.
 4. A Windows command prompt window opens.
