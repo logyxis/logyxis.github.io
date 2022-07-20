@@ -271,7 +271,7 @@ Close the Network Connections and Network and Sharing Center windows.
 
 On your Windows computer, open Notepad, and create a configuration file for the client. Use the template below as a model. You will need to change YOUR.DYNAMIC.DNSNAME to match your situation.
 
-```
+```bash
 client
 dev tun
 proto udp
